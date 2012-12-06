@@ -9,12 +9,20 @@ package com.bttstudio.soundloud;
  * @author martin
  */
 public interface SoundCloudAPI {
-    public void setClientID();
+
+    public void setClientID(String clientid);
+
     public boolean login(String username, String password);
-    public boolean anonymousLogin();
-    
-    public SearchResult search(String keyWords);
+
+    public boolean isAnonymous();
+
+    public SearchResult<User> searchUser(String keyWords);
+
+    public SearchResult<Track> searchTrack(String keyWords);
+
     public Track getTrack(String id);
-    
+
+    public User getUser(String id);
+
     public User me();
 }

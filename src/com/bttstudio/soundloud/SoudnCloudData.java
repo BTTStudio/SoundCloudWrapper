@@ -4,15 +4,10 @@
  */
 package com.bttstudio.soundloud;
 
-import java.util.List;
-
 /**
  *
  * @author martin
  */
-public interface SearchResult<T extends SoudnCloudData> {
-
-    public List<T> getResults();
-
-    public boolean hasResults();
+public interface SoudnCloudData {
+    
 }
