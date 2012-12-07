@@ -28,10 +28,10 @@ public class SoundCloudAPIImpl implements SoundCloudAPI {
     private boolean isUserLogedin = false;
     private User currentUser;
 
-    @Override
-    public void setClientID(String clientID) {
+    public SoundCloudAPIImpl(String clientID) {
         this.clientID = clientID;
     }
+
 
     @Override
     public boolean login(String username, String password) {

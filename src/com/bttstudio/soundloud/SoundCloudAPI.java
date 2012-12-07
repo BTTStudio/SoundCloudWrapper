@@ -10,8 +10,6 @@ package com.bttstudio.soundloud;
  */
 public interface SoundCloudAPI {
 
-    public void setClientID(String clientid);
-
     public boolean login(String username, String password);
 
     public boolean isAnonymous();

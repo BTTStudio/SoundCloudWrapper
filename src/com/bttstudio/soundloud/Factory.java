@@ -11,7 +11,7 @@ import com.bttstudio.soundloud.impl.SoundCloudAPIImpl;
  * @author martin
  */
 public class Factory {
-    public static SoundCloudAPI get() {
-        return new SoundCloudAPIImpl();
+    public static SoundCloudAPI get(String clientID) {
+        return new SoundCloudAPIImpl(clientID);
     }
 }
