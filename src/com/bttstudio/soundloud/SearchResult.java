@@ -10,7 +10,7 @@ import java.util.List;
  *
  * @author martin
  */
-public interface SearchResult<T extends SoudnCloudData> {
+public interface SearchResult<T extends SoudnCloudData> extends Iterable<T> {
 
     public List<T> getResults();
 

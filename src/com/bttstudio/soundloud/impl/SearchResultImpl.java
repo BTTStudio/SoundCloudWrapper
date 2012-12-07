@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -20,7 +21,7 @@ import org.json.JSONObject;
  *
  * @author martin
  */
-public class SearchResultImpl<T extends SoudnCloudData> implements SearchResult {
+public class SearchResultImpl<T extends SoudnCloudData> implements SearchResult<T> {
 
     private SoundCloudAPIImpl cloudAPIImpl;
     private Class type;
@@ -109,5 +110,10 @@ public class SearchResultImpl<T extends SoudnCloudData> implements SearchResult 
         } catch (IOException | JSONException ex) {
             Logger.getLogger(SoundCloudAPIImpl.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+
+    @Override
+    public Iterator<T> iterator() {
+        return results.iterator();
     }
 }
